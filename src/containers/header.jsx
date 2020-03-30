@@ -7,6 +7,7 @@ class Header extends React.Component{
                 <nav>
                     <h2><a href="#home">Movie Data</a></h2>
                     <div className="search-bar">
+                        hello
                     </div>
                 </nav>
             </div>
