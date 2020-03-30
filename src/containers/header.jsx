@@ -7,7 +7,6 @@ class Header extends React.Component{
                 <nav>
                     <h2><a href="#home">Movie Data</a></h2>
                     <div className="search-bar">
-                        <input type="text" name="" id=""/>
                     </div>
                 </nav>
             </div>
