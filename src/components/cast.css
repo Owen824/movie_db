@@ -1,0 +1,26 @@
+.cast{
+    /* width: 154px; */
+    width: 16%;
+    text-align: center;
+}
+.castImage{
+    width: 154px;
+    height:180px;
+    border-radius: 50%;
+}
+.castPerson h3{
+    font-size: 16px;
+    /* color:#000; */
+    font-weight: 700;
+    text-align: center;
+    margin:10px;
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
+  /* overflow: hidden;  */
+}
+.castName{
+    color:#000;
+}
+.castCharacter{
+    color:#ba090a;
+}

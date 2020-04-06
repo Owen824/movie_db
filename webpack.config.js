@@ -11,7 +11,23 @@ module.exports = {
           {test: /.jsx$/, exclude: /node_modules/, use: {loader:'babel-loader',
         options:{presets:['@babel/preset-react', '@babel/preset-env']}}},
         {test: /.js$/, exclude: /node_modules/, use: {loader:'babel-loader',
-        options:{presets:['@babel/preset-env']}}}
+        options:{presets:['@babel/preset-env']}}},
+        {
+          test: /\.css$/,
+          use:[
+            {
+              loader:'style-loader'
+            },
+            {
+              loader:'css-loader',
+              options:{
+                modules: {
+                  localIdentName: "[name]__[local]___[hash:base64:5]",
+              },
+              }
+            }
+          ]
+        }
       ]
   },
   devServer:{

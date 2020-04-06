@@ -1,0 +1,84 @@
+.header{
+    position:fixed;
+    width: 100vw;
+    top:0;
+    background-color: #ffffff;
+    /* border-bottom: 3px solid #f7eaeb; */
+    box-shadow: 0 0 5px #ba090a;
+    z-index: 100;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+    text-decoration: none;
+
+}
+.navLogo{
+    margin-left: 20px;
+    position: relative;
+}
+.navLogo h2{
+    padding:25px 30px;
+    font-family: sans-serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.navTitle{
+    color:#ba090a;
+    text-decoration: none;
+
+}
+.icon{
+    /* font-size: 36px; */
+    color:#ba090a;
+    /* line-height: 36px; */
+    
+    /* height: 40px; */
+   
+    text-decoration: none;  
+    /* padding:10px; */
+    text-align: center;
+    border:5px solid #fff;
+    /* margin: 10px 20px 5px 0; */
+    border-radius: 50%;
+    transition: color .6s, background-color .8s, border .8s;
+}
+.searchBar{
+    display: flex;
+    align-items: center;
+}
+.icon:hover{
+    color:#fff;
+    background-color:#ba090a;
+    border:5px solid #ba090a;
+}
+.iconFilm{
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    position: absolute;
+    color:black;
+    top:7px;
+    right:10px;
+    padding:3px;
+    border: 2px solid #ba090a;
+    text-decoration: none;
+    border-radius: 5px  ;
+    transform: rotate(35deg);
+}
+.iconHome{
+    composes: icon;   
+    margin-right: 20px;
+    padding:7px;
+    width: 51.5px;
+    
+}
+
+.iconSearch{
+    composes: icon;
+    margin-right: 50px;
+    padding:10px 12px;
+    width: 40px;
+
+}

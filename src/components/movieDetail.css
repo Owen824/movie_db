@@ -1,0 +1,66 @@
+.backdrop{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 86px);
+    color:rgb(255, 255, 255);
+    font-family: sans-serif;
+    
+}
+.movieContainer{
+    width: 80vw;
+    height: 100%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+}
+.posterContainer{
+    flex:0 0 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentDetail{
+    
+    flex:0 0 65%;
+    height:450px;
+    
+}
+
+.movieTitle h2{
+    margin-top: 15px;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    
+}
+.detailList{
+    /* padding:20px 0; */
+    margin-top: 10px;
+    font-size: 0;
+}
+.detailList span{
+    margin-right: 15px;
+    line-height: 70px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+.circular{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+.movieOverview{
+    /* padding:15px 0; */
+}
+.movieOverview h3{
+    font-size: 30px;
+    font-weight: 700;
+    padding:15px 0;
+}
+.movieOverview p{
+    letter-spacing: 2px;
+    line-height: 30px;
+}

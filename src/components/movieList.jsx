@@ -8,7 +8,7 @@ class MovieList extends React.Component{
         super(props);
         this.state={movielist:[]};
 
-        tmdb.apiCall(this.props.url,data=>{
+        tmdb.apiCall(this.props.url,this.props.params,data=>{
             data.results.splice(7)
             this.setState({movielist:data.results.splice(1)})
         })
@@ -40,6 +40,7 @@ class MovieList extends React.Component{
             margin:25px 0;
             justify-content:space-around;
             width:100%;
+            background:#f9f9f9;
         `;
 
         

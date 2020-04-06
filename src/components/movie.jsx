@@ -9,7 +9,7 @@ const Movie = props =>{
     const Item=styled.li`
         list-style:none;   
         font-size:0; 
-        box-shadow:5px 8px 12px #888888;
+        box-shadow:0px 5px 10px 8px rgba(186,9,10,.7);
     `;
     const TitleWrap=styled.div`
         width:185px;

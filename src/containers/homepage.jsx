@@ -7,9 +7,11 @@ class Homepage extends React.Component{
         return(
             <div>
                 <Header/>
-                <MovieList topic="popular" url="/movie/popular"/>
-                <MovieList topic="upcoming" url="/movie/upcoming"/>
-                <MovieList topic="now playing" url="/movie/now_playing"/>
+                <div style={{position:"relative",top:"100px"}}>
+                <MovieList topic="popular" url="/movie/popular" params=""/>
+                <MovieList topic="upcoming" url="/movie/upcoming" params=""/>
+                <MovieList topic="now playing" url="/movie/now_playing" params=""/>
+                </div>
             </div>
         )
     }

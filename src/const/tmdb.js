@@ -3,8 +3,8 @@ const tmdb ={
     "base_url":"https://api.themoviedb.org/3",
     "images_url": "https://image.tmdb.org/t/p",
     "timeout":5000,
-    apiCall: function(url, success , error){
-        let params_str=`api_key=${this.api_key}`;
+    apiCall: function(url,params, success , error){
+        let params_str=`api_key=${this.api_key}${params}`;
         let xhr = new XMLHttpRequest();
         xhr.timeout=this.timeout;
         xhr.ontimeout = function(){
