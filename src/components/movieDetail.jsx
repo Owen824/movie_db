@@ -4,6 +4,7 @@ import styles from "./movieDetail.css"
 import Circular from "./circular.jsx"
 import Similar from "./similar.jsx"
 import CastList from "./castList.jsx"
+import Trailer from "./trailer.jsx"
 
 
 class MovieDetail extends React.Component{
@@ -18,7 +19,8 @@ class MovieDetail extends React.Component{
             poster:"",
             backdrop:"",
             runtime:{},
-            similar:[]
+            similar:[],
+            videos:[],
             });
             this.duration=this.duration.bind(this);
         tmdb.apiCall(`/movie/${this.props.data}`,"&append_to_response=videos,similar,credits",data=>{
@@ -32,7 +34,8 @@ class MovieDetail extends React.Component{
                 poster:data.poster_path,
                 backdrop:data.backdrop_path,
                 runtime:this.duration(data.runtime),
-                similar:data.similar.results
+                similar:data.similar.results,
+                videos:data.videos.results,
             })
             
         })
@@ -42,7 +45,7 @@ class MovieDetail extends React.Component{
       }
     componentWillReceiveProps(nextProps){
         console.log(nextProps);
-        this.setState({title:"",date:"",rating:"",overview:"",cast:[],poster:"",backdrop:"",runtime:{},similar:[]});
+        this.setState({title:"",date:"",rating:"",overview:"",cast:[],poster:"",backdrop:"",runtime:{},similar:[],videos:[]});
         tmdb.apiCall(`/movie/${nextProps.data}`,"&append_to_response=videos,similar,credits",data=>{
             console.log(data);
             this.setState({
@@ -54,7 +57,8 @@ class MovieDetail extends React.Component{
                 poster:data.poster_path,
                 backdrop:data.backdrop_path,
                 runtime:this.duration(data.runtime),
-                similar:data.similar.results
+                similar:data.similar.results,
+                videos:data.videos.results
             })
             
         })
@@ -104,6 +108,7 @@ class MovieDetail extends React.Component{
                 </div>
                 <CastList castlist={this.state.cast}/>
                 <Similar movies={this.state.similar}/>
+                <Trailer videos={this.state.videos}/>
 
             </div>
         )

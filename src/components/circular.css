@@ -28,7 +28,7 @@
     
     stroke-dasharray: 220;
     stroke-dashoffset: 220;
-    stroke: #ba090a;
+    stroke: rgba(186,9,10,.9);
     /* animation: progress 1.2s forwards; */
 
 }
@@ -47,5 +47,5 @@
     height: 100%;
     font-size: 30px;
     font-weight: 700;
-    color:rgb(204, 18, 18);
+    color:rgba(186,9,10,.9);
 }

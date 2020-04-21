@@ -8,6 +8,7 @@
     z-index: 100;
 }
 .nav{
+    position: relative;
     display: flex;
     justify-content: space-between;
     font-size: 36px;
@@ -15,11 +16,11 @@
 
 }
 .navLogo{
-    margin-left: 20px;
+    margin-left: 30px;
     position: relative;
 }
 .navLogo h2{
-    padding:25px 30px;
+    padding:20px 30px;
     font-family: sans-serif;
     font-weight: 900;
     letter-spacing: 2px;
@@ -27,20 +28,14 @@
 .navTitle{
     color:#ba090a;
     text-decoration: none;
-
+    line-height: 36px;
+    display: block;
 }
 .icon{
-    /* font-size: 36px; */
-    color:#ba090a;
-    /* line-height: 36px; */
-    
-    /* height: 40px; */
-   
+    color:#ba090a;   
     text-decoration: none;  
-    /* padding:10px; */
     text-align: center;
     border:5px solid #fff;
-    /* margin: 10px 20px 5px 0; */
     border-radius: 50%;
     transition: color .6s, background-color .8s, border .8s;
 }
@@ -69,16 +64,46 @@
 }
 .iconHome{
     composes: icon;   
-    margin-right: 20px;
+    margin-right: 60px;
     padding:7px;
-    width: 51.5px;
+    width: 50px;
     
 }
 
-.iconSearch{
+/* .iconSearch{
     composes: icon;
     margin-right: 50px;
     padding:10px 12px;
     width: 40px;
+
+} */
+
+.suggestionContentBox{
+    font-family: sans-serif;
+    /* width: 100%; */
+    display: flex;
+    font-size: 12px;
+    color:#ba090a;
+    padding:3px 5px;
+    
+}
+.suggestionContentBox image{
+    width: 20%;
+}
+.suggestionTitle{
+  width: 80%;
+  padding:0 10px;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+.suggestionTitle span{
+    width: 100%;  
+    font-size: 16px;
+    /* font-weight: 600; */
+    color:#000;
+    line-height: 68px;
+    margin-right: 15px;
+ 
 
 }

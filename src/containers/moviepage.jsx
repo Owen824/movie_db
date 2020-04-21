@@ -10,7 +10,7 @@ class Moviepage extends React.Component{
         <div>
             <Header/>
             
-            <div style={{position:"relative",top:"100px"}}>
+            <div style={{position:"relative",top:"76px"}}>
 
             <MovieDetail data={id}/>
             

@@ -3,7 +3,7 @@ import styles from "./circular.css"
 import {css,keyframes} from "styled-components"
 
 const Circular =(props)=>{
-    console.log(props.rating);
+    // console.log(props.rating);
     
     
     

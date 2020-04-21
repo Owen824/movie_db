@@ -1,0 +1,55 @@
+.container{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+       
+}
+.input{
+    width: 33vw;
+    height: 46px;
+    /* vertical-align: middle; */
+    padding:0 10px;
+    border:2px solid #ba090a;
+    font-size: 16px;
+    background: transparent;
+    border-radius: 5px;
+    letter-spacing: 1px;
+
+}
+.inputOpen{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.inputFocused{
+    outline: none;
+}
+.suggestionsContainer{
+    display: none;
+    background: #fff;
+}
+.suggestionsContainerOpen{
+    display: block;
+    position: absolute;
+    width: 100%;
+    /* box-sizing: border-box; */
+    
+}
+.suggestionsList{
+    padding:0;
+    margin: 0;
+    list-style-type: none;
+    /* background: #ba090a; */
+}
+.suggestion{
+    box-sizing: border-box;
+    border-width: 0 2px 2px 2px ;
+    border-style: solid;
+    border-color: #ba090a;
+}
+.suggestionHighlighted{
+    background-color: rgba(186,9,10,.5);
+    
+}
+
