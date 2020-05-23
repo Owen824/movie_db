@@ -32,7 +32,7 @@ const Movie = props =>{
     return(
         <Item className="movie-item" >
             <Link to={pageRoute} style={{ textDecoration: 'none' }}>
-                <img src={`https://image.tmdb.org/t/p/w185${props.movie.poster_path}`} alt="movie_poster"/>
+                <img src={`https://image.tmdb.org/t/p/w185${props.movie.poster_path}`} style={{width:'185px',height:'280px'}} alt="movie_poster"/>
                 <TitleWrap>     
                         <MovieTitle>{props.movie.title}</MovieTitle>
                 </TitleWrap>

@@ -6,7 +6,7 @@ const CastList=(props)=>{
     props.castlist.splice(6);
     const list= props.castlist.map(function(item){
         return(<Cast person={item}/>)
-    })
+    });
     return(
         <div className={styles.castContainer}>
         <div className={styles.castTitle}>

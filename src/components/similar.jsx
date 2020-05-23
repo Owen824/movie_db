@@ -5,7 +5,6 @@ import Movie from "./movie.jsx"
 const Similar = (props) => {
     const movielist = [];
     props.movies.map(function (movie) {
-        // console.log(movie.backdrop_path);
         if (movie.backdrop_path === null) { }
         else {
             movielist.push(movie);
@@ -16,7 +15,7 @@ const Similar = (props) => {
 
         return <Movie movie={item} />
     })
-    console.log(movielist);
+    // console.log(movielist);
 
 
     return (

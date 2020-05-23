@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import tmdb from "../const/tmdb"
+import tmdb from "../api/tmdb"
 import Movie from "./movie.jsx"
 
 class MovieList extends React.Component{
@@ -8,16 +8,19 @@ class MovieList extends React.Component{
         super(props);
         this.state={movielist:[]};
 
+    }
+
+    componentDidMount(){
         tmdb.apiCall(this.props.url,this.props.params,data=>{
             data.results.splice(7)
             this.setState({movielist:data.results.splice(1)})
-        })
-        
+        });
     }
+
     render(){
-        let list=this.state.movielist.map(item=>{
+        let list=this.state.movielist.map((item,index)=>{
             // console.log(item.title);
-            return <Movie movie={item}/>
+            return <Movie movie={item} key={index}/>
         });
         const TopicWrapper = styled.div`
             margin:20px 0;

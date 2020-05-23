@@ -2,7 +2,6 @@ import React from "react"
 import styles from "./cast.css"
 
 const Cast =(props)=>{
-        console.log(props.profile_path);
     return(
         <div className={styles.cast}> 
             {/* <img className={styles.castImage} src={`https://image.tmdb.org/t/p/w154${props.person.profile_path}`} alt=""/> */}

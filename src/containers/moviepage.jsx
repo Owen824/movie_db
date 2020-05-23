@@ -4,7 +4,6 @@ import MovieDetail from "../components/movieDetail.jsx"
 
 class Moviepage extends React.Component{
     render(){
-        // console.log(this.props.match);
         const id=this.props.match.params.id;
         return(
         <div>

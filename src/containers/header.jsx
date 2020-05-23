@@ -3,11 +3,8 @@ import {Link,withRouter} from "react-router-dom"
 import styles from "./header.css"
 import Autosuggest from 'react-autosuggest'
 import {ReactSVG} from "react-svg"
-import tmdb from "../const/tmdb"
+import tmdb from "../api/tmdb"
 import theme from "./input.css"
-// import "./input.css"
-
-
 
 
 class Header extends React.Component{
@@ -18,13 +15,7 @@ class Header extends React.Component{
             suggestions:[]
         }
     }
-    // onChange(event,{newValue}){
-    //     console.log(newValue);
-    //     console.log(this);
-
-    //     this.setState({value:newValue});
-        
-    // }
+    
     onChange(event,{newValue}){
         console.log(newValue);
         this.setState({value:newValue});
@@ -49,7 +40,6 @@ class Header extends React.Component{
                 return item
             });
             this.setState({suggestions:results});
-            // console.log(results);
         })
     }
     getSuggestionValue(suggestion){
@@ -62,13 +52,7 @@ class Header extends React.Component{
                 <div className={styles.suggestionTitle}>
         <span>{suggestion.title}{`(${suggestion.year})`}</span>
                 </div>
-                {/* <div className={styles.suggestionYear}>
-                        <span>{suggestion.year}</span>
-                </div>
-                <div className={styles.suggestionRating}>
-                        <span>{suggestion.rating}</span>
-                </div> */}
-
+               
             </div>
         )
     }
@@ -108,9 +92,6 @@ class Header extends React.Component{
                         <ReactSVG className={styles.iconHome} src="./home-solid.svg"/>
                     </Link>
                    
-                    {/* <Link to="/search">
-                        <ReactSVG className={styles.iconSearch} src="./search-solid.svg"/>
-                    </Link> */}
                      </div>
                     <Autosuggest  
                      theme={theme}

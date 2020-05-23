@@ -1,5 +1,5 @@
 import React from "react"
-import tmdb from "../const/tmdb"
+import tmdb from "../api/tmdb"
 import styles from "./slidebar.css"
 
 
@@ -8,22 +8,25 @@ class Slidebar extends React.Component {
         super(props);
         this.state = { radioName:"",movielist: [] };
         this.changeState = this.changeState.bind(this);
+        
+    }
+
+    componentDidMount(){
         tmdb.apiCall(this.props.url, this.props.params, data => {
             data.results.splice(5);
             this.setState({ movielist: data.results })
-        })
-
+        });
     }
 
     changeState(event){
-        console.log(event.target.value);
-        console.log(event.target.checked);
+        // console.log(event.target.value);
         this.setState({radioName:event.target.value})
     }
+
     render() {
-        let slidelist = this.state.movielist.map(item => {
+        let slidelist = this.state.movielist.map((item,index) => {
             return (
-                <div className={styles.slide}>
+                <div className={styles.slide} key={index}>
                     <img src={`https://image.tmdb.org/t/p/w1280${item.backdrop_path}`} alt="" />
                 </div>
             )
