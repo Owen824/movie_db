@@ -7,7 +7,7 @@ class Slidebar extends React.Component {
     constructor(props) {
         super(props);
         this.state = { radioName:"",movielist: [] };
-        this.changeState = this.changeState.bind(this);
+        // this.changeState = this.changeState.bind(this);
         
     }
 

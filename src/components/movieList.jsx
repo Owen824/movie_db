@@ -12,7 +12,7 @@ class MovieList extends React.Component{
 
     componentDidMount(){
         tmdb.apiCall(this.props.url,this.props.params,data=>{
-            data.results.splice(7)
+            data.results.splice(7);
             this.setState({movielist:data.results.splice(1)})
         });
     }

@@ -3,7 +3,9 @@ import Cast from "./cast.jsx"
 import styles from "./castList.css"
 
 const CastList=(props)=>{
-    props.castlist.splice(6);
+    let castList = props.castlist;
+    //將資料縮短成6筆
+    castList.splice(6);
     const list= props.castlist.map(function(item){
         return(<Cast person={item}/>)
     });

@@ -27,6 +27,7 @@ class MovieDetail extends React.Component{
        
     }
     componentDidMount(){
+        //當component建構完時，請求api
         tmdb.apiCall(`/movie/${this.props.data}`,"&append_to_response=videos,similar,credits",data=>{
             this.setState({
                 title:data.title,
@@ -70,7 +71,7 @@ class MovieDetail extends React.Component{
 
       }
     
-
+    // 計算電影共幾小時幾分
     duration(time){
         let timeObject={
             minutes:0,

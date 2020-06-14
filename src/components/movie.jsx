@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 
 
-const Movie = props =>{
+const Movie = (props)=>{
     let pageRoute= "/movie/"+props.movie.id;
     const Item=styled.li`
         list-style:none;   

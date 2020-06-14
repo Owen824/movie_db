@@ -3,7 +3,7 @@ import styles from "./similar.css"
 import Movie from "./movie.jsx"
 
 const Similar = (props) => {
-    const movielist = [];
+    let movielist = [];
     props.movies.map(function (movie) {
         if (movie.backdrop_path === null) { }
         else {
